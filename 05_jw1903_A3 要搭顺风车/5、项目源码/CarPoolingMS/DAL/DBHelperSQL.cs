@@ -3,12 +3,12 @@ using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace MovieMS_JW4
+namespace DAL
 {
     class DBHelperSQL
     {
         private static string connString =
-            "server=.;database=MoveisDB;uid=sa;pwd=123456;";
+            "server=.;database=CarPoolingDB;uid=sa;pwd=123456;";
         //"server=.;databse=JW3_Test;Integrated Security=true;";
 
         private static SqlConnection conn = null;
