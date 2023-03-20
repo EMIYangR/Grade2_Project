@@ -1,0 +1,227 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="CarPoolingMS.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        body > div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded) > div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded > div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+    </script>
+    <!-- Favicon -->
+    <%--<link rel="icon" href="assets/img/brand/favicon.png" type="image/png">--%>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Content/all.min.css">
+    <!-- Quick CSS -->
+    <link rel="stylesheet" href="Content/quick-website.css" id="stylesheet">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-cookies" data-backdrop="false" aria-labelledby="modal-cookies" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-aside left-4 right-4 bottom-4">
+                <div class="modal-content bg-dark-dark">
+                    <div class="modal-body">
+                        <!-- Text -->
+                        <p class="text-sm text-white mb-3">
+                            我们使用Cookie，这样我们的主题就可以为您工作。使用我们的网站，即表示您同意我们使用Cookie。
+                        </p>
+                        <!-- Buttons -->
+                        <a href="pages/utility/terms.html" class="btn btn-sm btn-white" target="_blank">Learn more</a>
+                        <button type="button" class="btn btn-sm btn-primary mr-2" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <!-- Brand -->
+                <a class="navbar-brand" id="navbar-logo" href="index.aspx">要搭顺风车
+                </a>
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.aspx">首页</a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+                            <a class="nav-link" href="Login.aspx">登录</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Register.aspx">注册</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <footer class="position-relative" id="footer-main">
+            <div class="footer pt-lg-7 footer-dark bg-dark">
+                <!-- SVG shape -->
+                <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+                    <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background: new 0 0 2560 100;" xml:space="preserve" class=" fill-section-secondary">
+                        <polygon points="2560 0 2560 100 0 100"></polygon>
+                    </svg>
+                </div>
+                <!-- Footer -->
+                <div class="container pt-4">
+                    <div class="row">
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <!-- Theme's logo -->
+                            <a href="Index.aspx" id="footer-logo">要搭顺风车
+                            </a>
+                            <!-- Webpixels' mission -->
+                            <p class="mt-4 text-sm opacity-8 pr-lg-4">
+                                要搭顺风车网站是督导组开发的一款能够让挤公交车地铁的上班一族能够舒适出行，省时省力省钱的网站，还能减轻公共交通压力和节能环保。
+                            </p>
+                            <!-- Social -->
+                            <ul class="nav mt-4">
+                                <li class="nav-item">
+                                    <a class="nav-link pl-0" href="https://dribbble.com" target="_blank">
+                                        <ion-icon name="logo-dribbble"></ion-icon>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://github.com/EMIYang10627/Grade2_Project.git" target="_blank">
+                                        <ion-icon name="logo-github"></ion-icon>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.instagram.com" target="_blank">
+                                        <ion-icon name="logo-instagram"></ion-icon>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.facebook.com" target="_blank">
+                                        <ion-icon name="logo-facebook"></ion-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-6 col-sm-4 ml-lg-auto mb-5 mb-lg-0">
+                            <h6 class="heading mb-3">账号</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#">配置文件</a></li>
+                                <li><a href="#">设置</a></li>
+                                <li><a href="#">计费</a></li>
+                                <li><a href="#">通知</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
+                            <h6 class="heading mb-3">关于</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#">服务</a></li>
+                                <li><a href="#">定价</a></li>
+                                <li><a href="#">联系方式</a></li>
+                                <li><a href="#">事业</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
+                            <h6 class="heading mb-3">公司</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#">社区</a></li>
+                                <li><a href="#">帮助中心</a></li>
+                                <li><a href="#">支持</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="divider divider-fade divider-dark my-4">
+                    <div class="row align-items-center justify-content-md-between pb-4">
+                        <div class="col-md-6">
+                            <div class="copyright text-sm font-weight-bold text-center text-md-left">
+                                &copy; 2023 <a href="https://github.com/EMIYang10627/Grade2_Project.git" class="font-weight-bold" target="_blank">督导组</a>. All rights reserved
+                           
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">服务协议
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">隐私政策
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Cookies
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Core JS  -->
+        <script src="Content/jquery.min.js"></script>
+        <script src="Content/bootstrap.bundle.min.js"></script>
+        <script src="Content/svg-injector.min.js"></script>
+        <script src="Content/feather.min.js"></script>
+        <!-- Quick JS -->
+        <script src="Content/quick-website.js"></script>
+        <!--Ionicons JS-->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!-- Feather Icons -->
+        <script>
+            feather.replace({
+                'width': '1em',
+                'height': '1em'
+            })
+        </script>
+    </form>
+</body>
+</html>
