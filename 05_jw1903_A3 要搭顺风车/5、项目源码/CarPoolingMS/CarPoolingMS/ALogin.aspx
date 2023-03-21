@@ -68,7 +68,7 @@
                             我们使用Cookie，这样我们的主题就可以为您工作。使用我们的网站，即表示您同意我们使用Cookie。
                         </p>
                         <!-- Buttons -->
-                        <a href="pages/utility/terms.html" class="btn btn-sm btn-white" target="_blank">Learn more</a>
+                        <a href="pages/utility/terms.html" class="btn btn-sm btn-white" target="_blank">了解更多</a>
                         <button type="button" class="btn btn-sm btn-primary mr-2" data-dismiss="modal">OK</button>
                     </div>
                 </div>
