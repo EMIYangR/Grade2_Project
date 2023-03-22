@@ -67,12 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="All.aspx" />
     <Content Include="ALogin.aspx" />
     <Content Include="Content\all.min.css" />
     <Content Include="Content\image\car.png" />
+    <Content Include="Content\image\bg.jpg" />
     <Content Include="Content\quick-website.css" />
+    <Content Include="Details.aspx" />
+    <Content Include="Follow.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
+    <Content Include="Long.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Publish.aspx" />
     <Content Include="Register.aspx" />
@@ -83,15 +88,37 @@
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\quick-website.js" />
     <Content Include="Scripts\svg-injector.min.js" />
+    <Content Include="Short.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="All.aspx.cs">
+      <DependentUpon>All.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All.aspx.designer.cs">
+      <DependentUpon>All.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ALogin.aspx.cs">
       <DependentUpon>ALogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ALogin.aspx.designer.cs">
       <DependentUpon>ALogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Follow.aspx.cs">
+      <DependentUpon>Follow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Follow.aspx.designer.cs">
+      <DependentUpon>Follow.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -103,6 +130,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Long.aspx.cs">
+      <DependentUpon>Long.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Long.aspx.designer.cs">
+      <DependentUpon>Long.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -132,6 +166,13 @@
     </Compile>
     <Compile Include="Reset.aspx.designer.cs">
       <DependentUpon>Reset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Short.aspx.cs">
+      <DependentUpon>Short.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Short.aspx.designer.cs">
+      <DependentUpon>Short.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

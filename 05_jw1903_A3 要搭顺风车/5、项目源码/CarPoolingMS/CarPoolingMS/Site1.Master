@@ -73,7 +73,7 @@
                             我们使用Cookie，这样我们的主题就可以为您工作。使用我们的网站，即表示您同意我们使用Cookie。
                         </p>
                         <!-- Buttons -->
-                        <a href="pages/utility/terms.html" class="btn btn-sm btn-white" target="_blank">了解更多</a>
+                        <a href="#" class="btn btn-sm btn-white" target="_blank">了解更多</a>
                         <button type="button" class="btn btn-sm btn-primary mr-2" data-dismiss="modal">OK</button>
                     </div>
                 </div>
@@ -84,8 +84,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
                 <!-- Brand -->
-                <a class="navbar-brand" id="navbar-logo" href="index.aspx">
-					要搭顺风车
+                <a class="navbar-brand" id="navbar-logo" href="index.aspx">要搭顺风车
                 </a>
                 <!-- Toggler -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,13 +94,24 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
                         <li class="nav-item ">
-                            <a class="nav-link" href="index.aspx">首页</a>
+                            <a class="nav-link" href="index.aspx">主页</a>
                         </li>
                         <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
-                            <a class="nav-link" href="Login.aspx">登录</a>
+                            <a class="nav-link" href="#">拼车</a>
+                            <div class="dropdown-menu dropdown-menu-single">
+                                <a href="All.aspx" class="dropdown-item">全部拼车</a>
+                                <a href="Long.aspx" class="dropdown-item">长途拼车</a>
+                                <a href="Short.aspx" class="dropdown-item">短途拼车（上下班拼车）</a>
+                            </div>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="Register.aspx">注册</a>
+                        <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+                            <a class="nav-link" href="#">更多</a>
+                            <div class="dropdown-menu dropdown-menu-single">
+                                <a href="Follow.aspx" class="dropdown-item">我的关注</a>
+                                <div  class="dropdown-divider"></div>
+                                <a href="login.aspx" class="dropdown-item">登录</a>
+                                <a href="Register.aspx" class="dropdown-item">注册</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -126,8 +136,7 @@
                     <div class="row">
                         <div class="col-lg-4 mb-5 mb-lg-0">
                             <!-- Theme's logo -->
-                            <a href="Index.aspx" id="footer-logo">
-                                要搭顺风车
+                            <a href="Index.aspx" id="footer-logo">要搭顺风车
                             </a>
                             <!-- Webpixels' mission -->
                             <p class="mt-4 text-sm opacity-8 pr-lg-4">
@@ -196,15 +205,15 @@
                             <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">服务协议
-                                </a>
+                                    </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">隐私政策
-                                </a>
+                                    </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Cookies
-                                </a>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

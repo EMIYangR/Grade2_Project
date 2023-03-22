@@ -11,7 +11,7 @@ namespace CarPoolingMS
 {
 
 
-    public partial class Index
+    public partial class Follow
     {
     }
 }

@@ -20,6 +20,12 @@ namespace Model
         int publishID;
         int userID;
 
+        string carType;
+        string userPhone;
+        string carID;
+        int addNumber;
+        string publishName;
+
         public int S_ID { get => s_ID; set => s_ID = value; }
         public string S_StartingPlace { get => s_StartingPlace; set => s_StartingPlace = value; }
         public string S_Approach { get => s_Approach; set => s_Approach = value; }
@@ -31,5 +37,10 @@ namespace Model
         public string S_Message { get => s_Message; set => s_Message = value; }
         public int PublishID { get => publishID; set => publishID = value; }
         public int UserID { get => userID; set => userID = value; }
+        public string CarType { get => carType; set => carType = value; }
+        public string UserPhone { get => userPhone; set => userPhone = value; }
+        public string CarID { get => carID; set => carID = value; }
+        public int AddNumber { get => addNumber; set => addNumber = value; }
+        public string PublishName { get => publishName; set => publishName = value; }
     }
 }
