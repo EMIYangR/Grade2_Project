@@ -99,9 +99,9 @@
                         <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
                             <a class="nav-link" href="#">拼车</a>
                             <div class="dropdown-menu dropdown-menu-single">
-                                <a href="All.aspx" class="dropdown-item">全部拼车</a>
-                                <a href="Long.aspx" class="dropdown-item">长途拼车</a>
-                                <a href="Short.aspx" class="dropdown-item">短途拼车（上下班拼车）</a>
+                                <%--<a href="All.aspx" class="dropdown-item">全部拼车</a>--%>
+                                <a href="Long.aspx?id=1" class="dropdown-item">长途拼车</a>
+                                <a href="Short.aspx?id=1" class="dropdown-item">短途拼车（上下班拼车）</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown dropdown-animate" data-toggle="hover">

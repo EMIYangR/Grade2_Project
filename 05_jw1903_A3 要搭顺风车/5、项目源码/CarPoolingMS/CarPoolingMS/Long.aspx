@@ -69,7 +69,7 @@
             border: 1px solid;
         }
 
-        #leibie {
+        #leibie, #lbie {
             margin-left: 12%;
             font-weight: bold;
             padding-right: 1.75rem;
@@ -81,6 +81,14 @@
 
         .sbtn {
             padding: .25rem 1.75rem;
+        }
+
+        #lbie a {
+            margin-right: 30px;
+        }
+
+        #leibie a {
+            margin-right: 60px;
         }
     </style>
 
@@ -98,14 +106,16 @@
     </p>
     <p id="lbie">
         <span class="text-muted">类别：</span>
-        <asp:Button ID="Button2" class="rebtn lbbtn" runat="server" Text="全部" />
-        <asp:Button ID="Button3" class="rebtn lbbtn" runat="server" Text="长途拼车" />
-        <asp:Button ID="Button4" class="rebtn lbbtn" runat="server" Text="短途拼车（上下班拼车）" />
+        <a href="Long.aspx?id=1">长途拼车</a>
+        <a href="Short.aspx?id=1">短途拼车（上下班拼车）</a>
     </p>
     <p id="leibie">
         <span class="text-muted">供需：</span>
-        <asp:Button ID="Button5" class="rebtn lbbtn" runat="server" Text="乘客" OnClick="Button5_Click" />
-        <asp:Button ID="Button6" class="rebtn lbbtn" runat="server" Text="司机" OnClick="Button6_Click" />
+        <asp:Repeater ID="Repeater2" runat="server">
+            <ItemTemplate>
+                <a href="?id=<%# Eval("PublishID") %>"><%# Eval("PublishName") %></a>
+            </ItemTemplate>
+        </asp:Repeater>
     </p>
     <div id="long">
         <asp:Repeater ID="Repeater1" runat="server">
@@ -132,6 +142,15 @@
                 </div>
             </ItemTemplate>
         </asp:Repeater>
+    </div>
+    <div>
+        <asp:Button ID="Button7" runat="server" Text="首页" OnClick="Button7_Click" />
+        <asp:Button ID="Button8" runat="server" Text="上一页" OnClick="Button8_Click" />
+        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:Button ID="Button9" runat="server" Text="跳转" OnClick="Button9_Click" />
+        <asp:Button ID="Button10" runat="server" Text="下一页" OnClick="Button10_Click" />
+        <asp:Button ID="Button11" runat="server" Text="尾页" OnClick="Button11_Click" />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </div>
 </asp:Content>
 

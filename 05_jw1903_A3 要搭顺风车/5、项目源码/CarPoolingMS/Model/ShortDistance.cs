@@ -19,6 +19,7 @@ namespace Model
         string s_Message;
         int publishID;
         int userID;
+        string s_Effective;
 
         string carType;
         string userPhone;
@@ -42,5 +43,6 @@ namespace Model
         public string CarID { get => carID; set => carID = value; }
         public int AddNumber { get => addNumber; set => addNumber = value; }
         public string PublishName { get => publishName; set => publishName = value; }
+        public string S_Effective { get => s_Effective; set => s_Effective = value; }
     }
 }

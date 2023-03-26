@@ -1,4 +1,5 @@
 ﻿using BLL;
+using CarPoolingMS.Help;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,11 @@ namespace CarPoolingMS
 {
     public partial class Details : System.Web.UI.Page
     {
+        public static int ID;//PublishID
+        public static int UserID;//用户id
+        public static int dlUserID;//登录用户id
+        public static int L_ID; 
+        Pager pager;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -42,9 +48,59 @@ namespace CarPoolingMS
                 }
                 else
                 {
-                    Response.Redirect("Long.aspx");
+                    Response.Redirect("Long.aspx?id=1");
                 }
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

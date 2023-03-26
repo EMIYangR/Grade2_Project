@@ -67,12 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="All.aspx" />
     <Content Include="ALogin.aspx" />
     <Content Include="Content\all.min.css" />
     <Content Include="Content\image\car.png" />
     <Content Include="Content\image\bg.jpg" />
+    <Content Include="Content\image\car.jpg" />
     <Content Include="Content\quick-website.css" />
+    <Content Include="Modify.aspx" />
+    <Content Include="ShortDetails.aspx" />
     <Content Include="Details.aspx" />
     <Content Include="Follow.aspx" />
     <Content Include="Global.asax" />
@@ -92,19 +94,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="All.aspx.cs">
-      <DependentUpon>All.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="All.aspx.designer.cs">
-      <DependentUpon>All.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ALogin.aspx.cs">
       <DependentUpon>ALogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ALogin.aspx.designer.cs">
       <DependentUpon>ALogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShortDetails.aspx.cs">
+      <DependentUpon>ShortDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShortDetails.aspx.designer.cs">
+      <DependentUpon>ShortDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
@@ -124,6 +133,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Help\EmailCode.cs" />
+    <Compile Include="Help\Pager.cs" />
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
