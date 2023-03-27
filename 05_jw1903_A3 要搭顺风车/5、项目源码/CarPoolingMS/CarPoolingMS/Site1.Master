@@ -107,7 +107,7 @@
                         <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
                             <a class="nav-link" href="#">更多</a>
                             <div class="dropdown-menu dropdown-menu-single">
-                                <a href="Follow.aspx" class="dropdown-item">我的关注</a>
+                                <a href="HistoricalOrder.aspx" class="dropdown-item">历史订单</a>
                                 <div  class="dropdown-divider"></div>
                                 <a href="Alogin.aspx" class="dropdown-item">登录</a>
                                 <a href="Register.aspx" class="dropdown-item">注册</a>

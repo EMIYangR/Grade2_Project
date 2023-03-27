@@ -70,7 +70,7 @@ namespace DAL
         }
         public static bool Add(ShortDistance sd)//增
         {
-            string sql = string.Format("insert ShortDistance values('{0}','{1}',{2},'{3}',{4},{5},{6},'{7}',{8},{9},'{10}')",
+            string sql = string.Format("insert ShortDistance values('{0}','{1}','{2}','{3}',{4},{5},{6},'{7}',{8},{9},'{10}')",
                 sd.S_StartingPlace, sd.S_Approach, sd.S_Destination,
                 sd.S_TimeRequired, sd.S_Number, sd.S_Kilometers, sd.S_Price,
                 sd.S_Message, sd.PublishID, sd.UserID, sd.S_Effective);
@@ -411,6 +411,21 @@ namespace DAL
                 l.S_Price = Convert.ToDecimal(dr["S_Price"]);
                 l.S_Message = dr["S_Message"].ToString();
                 l.PublishID = (int)dr["PublishID"];
+                list.Add(l);
+            }
+            dr.Close();
+            return list;
+        }
+        public static List<ShortDistance> SelectByS_Effective(int userid, string Le)//根据有效无效查询历史订单
+        {
+            string sql = string.Format("select * from ShortDistance where UserID={0} and S_Effective={1}", userid, Le);
+            SqlDataReader dr = DBHelperSQL.GetDataReader(sql);
+            List<ShortDistance> list = new List<ShortDistance>();
+            while (dr.Read())
+            {
+                ShortDistance l = new ShortDistance();
+                l.S_StartingPlace = dr["S_StartingPlace"].ToString();
+                l.S_Destination = dr["S_Destination"].ToString();
                 list.Add(l);
             }
             dr.Close();

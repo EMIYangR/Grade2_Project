@@ -91,5 +91,9 @@ namespace BLL
         {
             return ShortDistanceService.SelectAllByCity(id, a, b);
         }
+        public static List<ShortDistance> SelectByS_Effective(int userid, string Le)//根据有效无效查询历史订单
+        {
+            return ShortDistanceService.SelectByS_Effective(userid, Le);
+        }
     }
 }

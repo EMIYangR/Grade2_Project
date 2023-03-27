@@ -134,7 +134,7 @@
         <p>
             <%--司机删除修改--%>
             <asp:Button ID="Button3" runat="server" Text="删除" OnClick="Button3_Click" OnClientClick="return confirm('是否确认删除?')" />
-            <a href="XgLongDetail.aspx">修改</a>
+            <a href="Modify.aspx">修改</a>
         </p>
         <%} %>
         <div>

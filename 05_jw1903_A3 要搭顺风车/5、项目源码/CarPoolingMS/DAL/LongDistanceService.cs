@@ -343,6 +343,20 @@ namespace DAL
             dr.Close();
             return list;
         }
-
+        public static List<LongDistance> SelectByL_Effective(int userid, string Le)//根据有效无效查询历史订单
+        {
+            string sql = string.Format("select * from LongDistance where UserID={0} and L_Effective={1}", userid, Le);
+            SqlDataReader dr = DBHelperSQL.GetDataReader(sql);
+            List<LongDistance> list = new List<LongDistance>();
+            while (dr.Read())
+            {
+                LongDistance l = new LongDistance();
+                l.L_StartingPlace = dr["L_StartingPlace"].ToString();
+                l.L_Destination = dr["L_Destination"].ToString();
+                list.Add(l);
+            }
+            dr.Close();
+            return list;
+        }
     }
 }

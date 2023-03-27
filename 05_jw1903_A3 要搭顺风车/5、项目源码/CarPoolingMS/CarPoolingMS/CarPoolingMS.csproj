@@ -67,14 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddCarID.aspx" />
     <Content Include="ALogin.aspx" />
     <Content Include="Content\all.min.css" />
+    <Content Include="Content\docs.css" />
     <Content Include="Content\flatpickr.min.css" />
     <Content Include="Content\image\car.png" />
     <Content Include="Content\image\bg.jpg" />
     <Content Include="Content\image\car.jpg" />
     <Content Include="Content\quick-website.css" />
     <Content Include="Content\select2.min.css" />
+    <Content Include="HistoricalOrder.aspx" />
     <Content Include="Modify.aspx" />
     <Content Include="ShortDetails.aspx" />
     <Content Include="Details.aspx" />
@@ -92,15 +95,30 @@
     <Content Include="Scripts\quick-website.js" />
     <Content Include="Scripts\svg-injector.min.js" />
     <Content Include="Short.aspx" />
+    <Content Include="ShortHistoricalOrder.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCarID.aspx.cs">
+      <DependentUpon>AddCarID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCarID.aspx.designer.cs">
+      <DependentUpon>AddCarID.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ALogin.aspx.cs">
       <DependentUpon>ALogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ALogin.aspx.designer.cs">
       <DependentUpon>ALogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HistoricalOrder.aspx.cs">
+      <DependentUpon>HistoricalOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HistoricalOrder.aspx.designer.cs">
+      <DependentUpon>HistoricalOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modify.aspx.cs">
       <DependentUpon>Modify.aspx</DependentUpon>
@@ -177,6 +195,13 @@
     </Compile>
     <Compile Include="Short.aspx.designer.cs">
       <DependentUpon>Short.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShortHistoricalOrder.aspx.cs">
+      <DependentUpon>ShortHistoricalOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShortHistoricalOrder.aspx.designer.cs">
+      <DependentUpon>ShortHistoricalOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

@@ -10,15 +10,19 @@ using System.Web.UI.WebControls;
 
 namespace CarPoolingMS
 {
+    
     public partial class Details : System.Web.UI.Page
     {
+        public static int a;
         public static int ID;//PublishID
         public static int UserID;//用户id
         public static int dlUserID;//登录用户id
         public static int L_ID;
+
         Pager pager;
         protected void Page_Load(object sender, EventArgs e)
         {
+            a = 1;
             if (!IsPostBack)
             {
                 pager = ViewState["pager"] as Pager;
@@ -135,7 +139,7 @@ namespace CarPoolingMS
                 int id = int.Parse(Request.QueryString["id"]);
                 if (LongDistanceManager.Delete(id))
                 {
-                    Response.Write("<script>alert('删除成功')</script>");
+                    Response.Write("<script>alert('删除成功')</script>;location.href='Long.aspx?id=1'</script>");
                 }
                 else
                 {
