@@ -94,20 +94,22 @@
     </div>
     <div id="fd">
         <p>
-            类型：
+            类型:
                 <asp:Label ID="Label12" runat="server" Text=""></asp:Label>
         </p>
+        <% if (ID == 1)
+            { %>
         <p>
-            <span>车牌号：
-                    <asp:Label ID="Label9" runat="server" Text=""></asp:Label>
+            <span>车牌号:
+                <asp:Label ID="Label9" runat="server" Text=""></asp:Label>
             </span>
-            <span id="carType">车型：
-                    <asp:Label ID="Label6" runat="server" Text=""></asp:Label>
+            <span id="carType">车型:
+                <asp:Label ID="Label6" runat="server" Text=""></asp:Label>
             </span>
         </p>
         <p>
-            剩余人数：
-                <asp:Label ID="Label11" runat="server" Text=""></asp:Label>
+            剩余人数:
+            <asp:Label ID="Label11" runat="server" Text=""></asp:Label>
         </p>
     </div>
     <div>
@@ -120,7 +122,7 @@
         <p>
 
             <span>车牌号:
-                        <asp:Label ID="Label14" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="Label19" runat="server" Text=""></asp:Label>
             </span>
             <span>车型:
                         <asp:Label ID="Label15" runat="server" Text=""></asp:Label>
@@ -135,12 +137,12 @@
         <p>
             <asp:Label ID="Label17" runat="server" Text="加入人数"></asp:Label>
             <asp:TextBox ID="TextBox1" runat="server" type="number"></asp:TextBox>
-            <asp:Button ID="Button1" runat="server" Text="加入"  />
+            <asp:Button ID="Button1" runat="server" Text="加入" />
 
         </p>
         <%}
-        else
-        {%>
+            else
+            {%>
         <p>
             <%--司机删除修改--%>
             <asp:Button ID="Button3" runat="server" Text="删除" OnClick="Button3_Click" OnClientClick="return confirm('是否确认删除?')" />
@@ -174,7 +176,7 @@
                 <asp:Button ID="Button8" runat="server" Text="搜索" OnClick="Button8_Click" />
                 <asp:Button ID="Button9" runat="server" Text="下一页" OnClick="Button9_Click" />
                 <asp:Button ID="Button10" runat="server" Text="尾页" OnClick="Button10_Click" />
-                <asp:Label ID="Label18" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label14" runat="server" Text=""></asp:Label>
             </div>
             <div>
                 内容:
@@ -185,16 +187,16 @@
             </div>
         </div>
         <%}
-        else
-        { %>
+            else
+            { %>
         <%if (UserID != dlUserID)
             { %>
         <p>
             <asp:Button ID="Button2" runat="server" Text="邀请加入" OnClick="Button2_Click" />
         </p>
         <%}
-        else
-        { %>
+            else
+            { %>
         <p>
             <%--乘客删除修改--%>
             <asp:Button ID="Button4" runat="server" Text="删除" OnClick="Button4_Click" OnClientClick="return confirm('是否确认删除?')" />
@@ -202,6 +204,7 @@
         </p>
         <%} %>
 
-        <%} %>
+        <%}
+            } %>
     </div>
 </asp:Content>

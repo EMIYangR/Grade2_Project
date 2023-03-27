@@ -24,6 +24,7 @@ namespace CarPoolingMS
                 if (Request.QueryString["id"] != null)
                 {
                     id = int.Parse(Request.QueryString["id"]);
+                  
                 }
 
                 Pager pager1 = new Pager();

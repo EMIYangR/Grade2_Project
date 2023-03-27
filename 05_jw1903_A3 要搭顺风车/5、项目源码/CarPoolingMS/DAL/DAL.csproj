@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommentService.cs" />
     <Compile Include="DBHelperSQL.cs" />
     <Compile Include="FollowService.cs" />
     <Compile Include="LongDistanceService.cs" />

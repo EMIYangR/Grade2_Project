@@ -109,8 +109,9 @@
                             <div class="dropdown-menu dropdown-menu-single">
                                 <a href="Follow.aspx" class="dropdown-item">我的关注</a>
                                 <div  class="dropdown-divider"></div>
-                                <a href="login.aspx" class="dropdown-item">登录</a>
+                                <a href="Alogin.aspx" class="dropdown-item">登录</a>
                                 <a href="Register.aspx" class="dropdown-item">注册</a>
+
                             </div>
                         </li>
                     </ul>

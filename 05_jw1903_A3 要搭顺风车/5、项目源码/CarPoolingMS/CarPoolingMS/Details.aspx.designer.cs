@@ -132,13 +132,13 @@ namespace CarPoolingMS
         protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
-        /// Label14 控件。
+        /// Label19 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::System.Web.UI.WebControls.Label Label19;
 
         /// <summary>
         /// Label15 控件。
@@ -258,13 +258,13 @@ namespace CarPoolingMS
         protected global::System.Web.UI.WebControls.Button Button10;
 
         /// <summary>
-        /// Label18 控件。
+        /// Label14 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label18;
+        protected global::System.Web.UI.WebControls.Label Label14;
 
         /// <summary>
         /// TextBox2 控件。

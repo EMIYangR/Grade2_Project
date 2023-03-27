@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommentManager.cs" />
     <Compile Include="LongDistanceManager.cs" />
     <Compile Include="FollowManager.cs" />
     <Compile Include="PublishManager.cs" />

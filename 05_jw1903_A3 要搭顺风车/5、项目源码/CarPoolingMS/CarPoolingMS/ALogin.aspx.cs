@@ -10,6 +10,7 @@ namespace CarPoolingMS
 {
     public partial class ALogin : System.Web.UI.Page
     {
+        public static int userid;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -20,9 +21,10 @@ namespace CarPoolingMS
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (UserInfoManager.UserInfoByuserpwd(TextBox1.Text, TextBox2.Text) != null)
+            if (UserInfoManager.UserInfoByuserpwd(TextBox1.Text, TextBox2.Text) == null)
             {
                 Response.Write("<script>alert('登录成功')</script>");
+                userid = UserInfoManager.UserInfoByuserid(TextBox1.Text, TextBox2.Text);
                 Response.Redirect("Index.aspx");
             }
             else

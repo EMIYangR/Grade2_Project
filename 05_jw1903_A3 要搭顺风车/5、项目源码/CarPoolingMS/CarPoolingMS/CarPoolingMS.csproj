@@ -69,14 +69,15 @@
   <ItemGroup>
     <Content Include="ALogin.aspx" />
     <Content Include="Content\all.min.css" />
+    <Content Include="Content\flatpickr.min.css" />
     <Content Include="Content\image\car.png" />
     <Content Include="Content\image\bg.jpg" />
     <Content Include="Content\image\car.jpg" />
     <Content Include="Content\quick-website.css" />
+    <Content Include="Content\select2.min.css" />
     <Content Include="Modify.aspx" />
     <Content Include="ShortDetails.aspx" />
     <Content Include="Details.aspx" />
-    <Content Include="Follow.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="Long.aspx" />
@@ -121,13 +122,6 @@
     </Compile>
     <Compile Include="Details.aspx.designer.cs">
       <DependentUpon>Details.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Follow.aspx.cs">
-      <DependentUpon>Follow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Follow.aspx.designer.cs">
-      <DependentUpon>Follow.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

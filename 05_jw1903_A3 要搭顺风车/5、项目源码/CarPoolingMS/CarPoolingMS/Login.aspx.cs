@@ -9,6 +9,7 @@ namespace CarPoolingMS
 {
     public partial class Login : System.Web.UI.Page
     {
+        //public static int userid;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
