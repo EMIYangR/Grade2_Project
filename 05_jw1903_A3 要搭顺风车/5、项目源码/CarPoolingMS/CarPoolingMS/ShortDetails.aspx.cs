@@ -30,13 +30,14 @@ namespace CarPoolingMS
                     UserID = ShortDistanceManager.SelectByUserID(id);//获发布用户id
                     dlUserID = ALogin.userid;//登录用户id
 
-                    if (dlUserID == 0)
+                    HttpCookie cookie = Request.Cookies["userid"];
+                    if (cookie.Value == null)
                     {
-                        Response.Redirect("ALogin.aspx");
+                        Response.Write("<script>alert('请先登录！');location.href='ALogin.aspx'</script>");
                     }
 
                     ShortDistance l = ShortDistanceManager.SelectByID(id);
-                    Label1.Text = l.S_Price.ToString();
+                    Label1.Text = "&yen;" + l.S_Price.ToString();
                     Label3.Text = l.S_StartingPlace + "-" + l.S_Approach + "-" + l.S_Destination;
                     Label4.Text = l.S_TimeRequired;
                     Label5.Text = l.UserPhone;

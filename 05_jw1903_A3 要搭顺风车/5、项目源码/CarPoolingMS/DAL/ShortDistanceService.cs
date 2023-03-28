@@ -425,6 +425,7 @@ namespace DAL
             {
                 ShortDistance l = new ShortDistance();
                 l.S_StartingPlace = dr["S_StartingPlace"].ToString();
+                l.S_Approach = dr["S_Approach"].ToString();
                 l.S_Destination = dr["S_Destination"].ToString();
                 list.Add(l);
             }

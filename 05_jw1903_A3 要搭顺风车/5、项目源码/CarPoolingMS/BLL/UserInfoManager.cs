@@ -22,6 +22,10 @@ namespace BLL
         {
             return UserInfoService.UserInfoByuserid(user, pwd);
         }
+        public static int UserInfoByEmail(string email)//登录通过邮箱获取userid
+        {
+            return UserInfoService.UserInfoByuserEmail(email);
+        }
         public static string UserInfoByuserpwd(string user, string pwd)//登录
         {
             return UserInfoService.UserInfoByuserpwd(user, pwd);

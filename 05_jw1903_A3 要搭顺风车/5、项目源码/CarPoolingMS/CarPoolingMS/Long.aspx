@@ -40,6 +40,7 @@
 
         #search {
             text-align: center;
+            margin-top: 10px;
         }
 
         #long {
@@ -90,6 +91,11 @@
         #leibie a {
             margin-right: 60px;
         }
+
+        #top {
+            margin-top: 25px;
+        }
+
     </style>
 
     <link rel="stylesheet" href="Content/all.min.css" />
@@ -99,9 +105,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p id="search">
         出发城市：
-        <asp:TextBox ID="TextBox1" class="" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" class="form-control form-control-emphasized text-center" Width="250px" Height="40px" runat="server"></asp:TextBox>
         目的城市：
-        <asp:TextBox ID="TextBox2" class="" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox2" class="form-control form-control-emphasized text-center" Width="250px" Height="40px" runat="server"></asp:TextBox>
         <asp:Button ID="Button1" class="rebtn sbtn btn-youtube" runat="server" Text="搜索" OnClick="Button1_Click" />
     </p>
     <p id="lbie">
@@ -122,7 +128,7 @@
             <ItemTemplate>
                 <div id="long1">
                     <div id="long4">
-                        <img src="Content/image/car.png" />
+                        <img src="Content/image/lcar.jpg" />
                     </div>
                     <div id="long2">
                         <p>
@@ -143,14 +149,16 @@
             </ItemTemplate>
         </asp:Repeater>
     </div>
-    <div>
-        <asp:Button ID="Button7" runat="server" Text="首页" OnClick="Button7_Click" />
-        <asp:Button ID="Button8" runat="server" Text="上一页" OnClick="Button8_Click" />
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <asp:Button ID="Button9" runat="server" Text="跳转" OnClick="Button9_Click" />
-        <asp:Button ID="Button10" runat="server" Text="下一页" OnClick="Button10_Click" />
-        <asp:Button ID="Button11" runat="server" Text="尾页" OnClick="Button11_Click" />
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <div id="top">
+        <p class="text-center">
+            <asp:Button ID="Button7" runat="server" Text="首页" OnClick="Button7_Click" class="btn" />
+            <asp:Button ID="Button8" runat="server" Text="上一页" OnClick="Button8_Click" class="btn" />
+            <asp:TextBox ID="TextBox3" runat="server" class="form-control form-control-emphasized text-center" Width="125px" Height="20px"></asp:TextBox>
+            <asp:Button ID="Button9" runat="server" Text="跳转" OnClick="Button9_Click" class="btn" />
+            <asp:Button ID="Button10" runat="server" Text="下一页" OnClick="Button10_Click" class="btn" />
+            <asp:Button ID="Button11" runat="server" Text="尾页" OnClick="Button11_Click" class="btn" />
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        </p>
     </div>
 </asp:Content>
 

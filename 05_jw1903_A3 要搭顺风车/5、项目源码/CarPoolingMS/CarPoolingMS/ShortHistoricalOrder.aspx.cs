@@ -10,10 +10,12 @@ namespace CarPoolingMS
 {
     public partial class ShortHistoricalOrder : System.Web.UI.Page
     {
+        public static int i;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                i = 1;
                 int userid = ALogin.userid;
                 if (userid != 0)
                 {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,7 +10,7 @@ namespace CarPoolingMS
 {
     public partial class Login : System.Web.UI.Page
     {
-        //public static int userid;
+        public static int userid;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -20,11 +21,14 @@ namespace CarPoolingMS
         protected void Button1_Click(object sender, EventArgs e)
         {
             string code = Session["emailCode"].ToString();
+
             if (code == TextBox2.Text)
             {
+                Response.Write("<script>alert('登录成功');location.href='Index.aspx'</script>");
 
-                Response.Write("<script>alert('登录成功')</script>");
-                Response.Redirect("~/Index.aspx");
+                userid = UserInfoManager.UserInfoByEmail(TextBox1.Text);
+
+                Response.Cookies["userid"].Value = userid.ToString();
             }
             else
             {

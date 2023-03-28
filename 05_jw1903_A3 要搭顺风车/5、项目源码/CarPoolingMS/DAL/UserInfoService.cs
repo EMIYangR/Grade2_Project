@@ -34,6 +34,18 @@ namespace DAL
             dr.Close();
             return userid;
         }
+        public static int UserInfoByuserEmail(string email)//登录通过邮箱获取userid
+        {
+            string sql = string.Format("select UserID from UserInfo where Email='{0}'", email);
+            SqlDataReader dr = DBHelperSQL.GetDataReader(sql);
+            int userid = 0;
+            while (dr.Read())
+            {
+                userid = (int)dr["UserID"];
+            }
+            dr.Close();
+            return userid;
+        }
         public static string UserInfoByuserpwd(string user, string pwd)//登录
         {
             string sql = string.Format("select * from UserInfo where UserAccount='{0}' and UserPwd='{1}'", user, pwd);

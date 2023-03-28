@@ -34,13 +34,14 @@ namespace CarPoolingMS
                     UserID = LongDistanceManager.SelectByUserID(id);//获发布用户id
                     dlUserID = ALogin.userid;//登录用户id
 
-                    if (dlUserID == 0)
+                    HttpCookie cookie = Request.Cookies["userid"];
+                    if (cookie.Value == null)
                     {
-                        Response.Redirect("ALogin.aspx");
+                        Response.Write("<script>alert('请先登录！');location.href='ALogin.aspx'</script>");
                     }
 
                     LongDistance l = LongDistanceManager.SelectByID(id);
-                    Label1.Text = l.L_Price.ToString();
+                    Label1.Text = "&yen;" + l.L_Price.ToString();
                     Label3.Text = l.L_StartingPlace + "-" + l.L_Destination;
                     Label4.Text = l.L_TimeRequired;
                     Label5.Text = l.UserPhone;
@@ -161,7 +162,7 @@ namespace CarPoolingMS
 
                 if (LongDistanceManager.SelectByLsLdTime(ls, ld, time, ALogin.userid) != null)
                 {
-                    Response.Write("<script>alert('请发布相关线路');location.href='SjFabu.aspx?id=2'</script>");
+                    Response.Write("<script>alert('请发布相关线路');location.href='Publish.aspx'</script>");
                 }
                 LongDistance le = LongDistanceManager.SelectAByLsLdTime(ls, ld, time, ALogin.userid);
                 int L_ID = le.L_ID;

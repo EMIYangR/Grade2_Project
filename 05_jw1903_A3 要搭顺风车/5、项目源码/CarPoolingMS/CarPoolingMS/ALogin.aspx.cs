@@ -1,10 +1,9 @@
 ﻿using BLL;
+using Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Data.SqlClient;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace CarPoolingMS
 {
@@ -15,17 +14,23 @@ namespace CarPoolingMS
         {
             if (!IsPostBack)
             {
-
+                
             }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            string user = TextBox1.Text.Trim();
+            string pwd = TextBox2.Text.Trim();
+
+
             if (UserInfoManager.UserInfoByuserpwd(TextBox1.Text, TextBox2.Text) == null)
             {
-                Response.Write("<script>alert('登录成功')</script>");
+                Response.Write("<script>alert('登录成功');location.href='Index.aspx'</script>");
+
                 userid = UserInfoManager.UserInfoByuserid(TextBox1.Text, TextBox2.Text);
-                Response.Redirect("Index.aspx");
+
+                Response.Cookies["userid"].Value = userid.ToString();
             }
             else
             {

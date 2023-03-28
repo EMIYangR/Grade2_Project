@@ -11,22 +11,20 @@ namespace CarPoolingMS
 {
     public partial class Publish : System.Web.UI.Page
     {
-        public static string name;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 TextBox4.Attributes["onclick"] = ClientScript.GetPostBackEventReference(Button0, null);
-                if (ALogin.userid == 0)
+
+                HttpCookie cookie = Request.Cookies["userid"];
+                if (cookie.Value == null)
                 {
                     Response.Write("<script>alert('请先登录！');location.href='ALogin.aspx'</script>");
                 }
-
-                string a = name;
-
+                Label1.Visible = false;
+                TextBox3.Visible = false;
             }
-
-
         }
 
         protected void Button0_Click(object sender, EventArgs e)
@@ -194,11 +192,25 @@ namespace CarPoolingMS
 
         protected void RadioButton4_CheckedChanged(object sender, EventArgs e)
         {
+            if (RadioButton2.Checked)
+            {
+
+            }
             RadioButton rb = (RadioButton)sender;
             if (rb.Checked)
             {
-                name = "短途拼车（上下班拼车）";
-                
+                Label1.Visible = true;
+                TextBox3.Visible = true;
+            }
+        }
+
+        protected void RadioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = (RadioButton)sender;
+            if (rb.Checked)
+            {
+                Label1.Visible = false;
+                TextBox3.Visible = false;
             }
         }
     }
