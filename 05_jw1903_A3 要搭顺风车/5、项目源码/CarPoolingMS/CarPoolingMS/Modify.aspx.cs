@@ -22,6 +22,7 @@ namespace CarPoolingMS
                     Label2.Text = l.L_StartingPlace;
                     Label3.Text = l.L_Destination;
                     Label4.Text = "";
+                    Label5.Text = string.Format(l.L_TimeRequired,"yyyy-MM-DD HH-mm-SS");
                     Label5.Text = l.L_TimeRequired;
                     Label6.Text = l.L_Kilometers.ToString();
                     Label7.Text = l.CarID;

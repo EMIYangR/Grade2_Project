@@ -35,7 +35,7 @@ namespace CarPoolingMS
                     dlUserID = ALogin.userid;//登录用户id
 
                     HttpCookie cookie = Request.Cookies["userid"];
-                    if (cookie.Value == null)
+                    if (cookie == null)
                     {
                         Response.Write("<script>alert('请先登录！');location.href='ALogin.aspx'</script>");
                     }
@@ -43,7 +43,7 @@ namespace CarPoolingMS
                     LongDistance l = LongDistanceManager.SelectByID(id);
                     Label1.Text = "&yen;" + l.L_Price.ToString();
                     Label3.Text = l.L_StartingPlace + "-" + l.L_Destination;
-                    Label4.Text = l.L_TimeRequired;
+                    Label4.Text = string.Format(l.L_TimeRequired, "yyyy-MM-DD HH-mm-SS");
                     Label5.Text = l.UserPhone;
                     Label6.Text = l.CarType;
                     Label7.Text = l.L_Number.ToString();

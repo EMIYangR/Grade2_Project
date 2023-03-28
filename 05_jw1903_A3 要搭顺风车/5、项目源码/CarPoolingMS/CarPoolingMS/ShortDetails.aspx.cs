@@ -21,6 +21,7 @@ namespace CarPoolingMS
         {
             if (!IsPostBack)
             {
+                Details.a = 0;
                 pager = ViewState["pager"] as Pager;
                 if (Request.QueryString["id"] != null)
                 {
@@ -31,7 +32,7 @@ namespace CarPoolingMS
                     dlUserID = ALogin.userid;//登录用户id
 
                     HttpCookie cookie = Request.Cookies["userid"];
-                    if (cookie.Value == null)
+                    if (cookie == null)
                     {
                         Response.Write("<script>alert('请先登录！');location.href='ALogin.aspx'</script>");
                     }
@@ -39,7 +40,7 @@ namespace CarPoolingMS
                     ShortDistance l = ShortDistanceManager.SelectByID(id);
                     Label1.Text = "&yen;" + l.S_Price.ToString();
                     Label3.Text = l.S_StartingPlace + "-" + l.S_Approach + "-" + l.S_Destination;
-                    Label4.Text = l.S_TimeRequired;
+                    Label4.Text = string.Format(l.S_TimeRequired, "yyyy-MM-DD HH-mm-SS");
                     Label5.Text = l.UserPhone;
                     Label6.Text = l.CarType;
                     Label7.Text = l.S_Number.ToString();
@@ -154,7 +155,7 @@ namespace CarPoolingMS
 
                 if (ShortDistanceManager.SelectByLsLdTime(ls, ld, time, ALogin.userid) != null)
                 {
-                    Response.Write("<script>alert('请发布相关线路');location.href='Pubulish.aspx?id=2'</script>");
+                    Response.Write("<script>alert('请发布相关线路');location.href='Publish.aspx'</script>");
                 }
                 ShortDistance le = ShortDistanceManager.SelectAByLsLdTime(ls, ld, time, ALogin.userid);
                 int S_ID = le.S_ID;

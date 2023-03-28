@@ -18,7 +18,7 @@ namespace CarPoolingMS
                 TextBox4.Attributes["onclick"] = ClientScript.GetPostBackEventReference(Button0, null);
 
                 HttpCookie cookie = Request.Cookies["userid"];
-                if (cookie.Value == null)
+                if (cookie == null)
                 {
                     Response.Write("<script>alert('请先登录！');location.href='ALogin.aspx'</script>");
                 }
@@ -66,7 +66,7 @@ namespace CarPoolingMS
                                     l.L_Price = Convert.ToDecimal(TextBox7.Text);
                                     if (LongDistanceManager.Add(l))
                                     {
-                                        Response.Write("<script>alert('发布成功');location.href='Long.aspx?id=2'</script>");
+                                        Response.Write("<script>alert('发布成功');location.href='Long.aspx?id=1'</script>");
                                     }
                                 }
                             }
@@ -103,7 +103,7 @@ namespace CarPoolingMS
                                     l.S_Price = Convert.ToDecimal(TextBox7.Text);
                                     if (ShortDistanceManager.Add(l))
                                     {
-                                        Response.Write("<script>alert('发布成功');location.href='Short.aspx?id=2'</script>");
+                                        Response.Write("<script>alert('发布成功');location.href='Short.aspx?id=1'</script>");
                                     }
                                 }
                             }
@@ -143,7 +143,7 @@ namespace CarPoolingMS
                                 l.L_Price = Convert.ToDecimal(TextBox7.Text);
                                 if (LongDistanceManager.Add(l))
                                 {
-                                    Response.Write("<script>alert('发布成功');location.href='Long.aspx'</script>");
+                                    Response.Write("<script>alert('发布成功');location.href='Long.aspx?id=1'</script>");
 
                                 }
                             }
@@ -172,7 +172,7 @@ namespace CarPoolingMS
                                 l.S_Price = Convert.ToDecimal(TextBox7.Text);
                                 if (ShortDistanceManager.Add(l))
                                 {
-                                    Response.Write("<script>alert('发布成功');location.href='Long.aspx'</script>");
+                                    Response.Write("<script>alert('发布成功');location.href='Long.aspx?id=1'</script>");
 
                                 }
                             }

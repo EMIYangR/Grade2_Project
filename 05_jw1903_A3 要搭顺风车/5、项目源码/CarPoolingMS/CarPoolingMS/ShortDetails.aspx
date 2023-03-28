@@ -58,7 +58,7 @@
             </div>
             <div id="msg">
                 <p>
-                    价格：&yen;
+                    价格：
                     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                 </p>
                 <p>
@@ -134,8 +134,8 @@
                 {%>
             <p>
                 <%--司机删除修改--%>
-                <asp:Button ID="Button3" runat="server" Text="删除" OnClick="Button3_Click" OnClientClick="return confirm('是否确认删除?')" />
-                <a href="Modify.aspx">修改</a>
+                <asp:Button ID="Button3" runat="server" Text="删除" OnClick="Button3_Click" OnClientClick="return confirm('是否确认删除?')" class="btn btn-soft-warning" />
+                <a href="Modify.aspx" class="btn btn-link">修改</a>
             </p>
             <%} %>
             <div>

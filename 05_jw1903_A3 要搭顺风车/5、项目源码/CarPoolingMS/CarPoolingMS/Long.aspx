@@ -95,7 +95,6 @@
         #top {
             margin-top: 25px;
         }
-
     </style>
 
     <link rel="stylesheet" href="Content/all.min.css" />
@@ -112,7 +111,7 @@
     </p>
     <p id="lbie">
         <span class="text-muted">类别：</span>
-        <a href="Long.aspx?id=1">长途拼车</a>
+        <a href="Long.aspx?id=1" class="font-weight-bold border border-primary">长途拼车</a>
         <a href="Short.aspx?id=1">短途拼车（上下班拼车）</a>
     </p>
     <p id="leibie">

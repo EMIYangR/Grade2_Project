@@ -14,7 +14,7 @@ namespace CarPoolingMS
             if (!IsPostBack)
             {
                 HttpCookie cookie = Request.Cookies["userid"];
-                if (cookie.Value != null)
+                if (cookie != null)
                 {
                     LinkButton1.Text = "切换账户";
                     LinkButton2.Text = "";
