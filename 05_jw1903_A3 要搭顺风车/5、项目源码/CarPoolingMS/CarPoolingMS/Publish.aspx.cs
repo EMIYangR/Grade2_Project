@@ -40,6 +40,12 @@ namespace CarPoolingMS
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            //string type = UserInfoManager.SelectByCarID(ALogin.userid);//根据userid查询车牌号
+            //if (true)
+            //{
+
+            //}
+
             if (RadioButton1.Checked)
             {
                 if (RadioButton3.Checked)

@@ -24,7 +24,7 @@ namespace CarPoolingMS
 
             if (code == TextBox2.Text)
             {
-                Response.Write("<script>alert('登录成功');location.href='Index.aspx'</script>");
+                Response.Write("<script>location.href='Index.aspx'</script>");
 
                 userid = UserInfoManager.UserInfoByEmail(TextBox1.Text);
 
@@ -32,13 +32,13 @@ namespace CarPoolingMS
             }
             else
             {
-                Response.Write("<script>alert('登录失败')</script>");
+                Response.Write("<script>alert('验证码错误！')</script>");
             }
         }
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            if (BLL.UserInfoManager.UserInfoByemail(TextBox1.Text) != null)
+            if (BLL.UserInfoManager.UserInfoByemail(TextBox1.Text) == null)
             {
                 Help.EmailCode.Send(TextBox1.Text);
             }

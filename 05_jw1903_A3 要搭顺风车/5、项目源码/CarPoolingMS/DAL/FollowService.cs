@@ -10,6 +10,42 @@ namespace DAL
 {
     public class FollowService
     {
+        public static List<Follow> JRA(int id)
+        {
+            string sql = string.Format("select b.L_StartingPlace,b.L_Destination,a.AddNumber from Follow a join LongDistance b on a.L_ID=b.L_ID where a.UserID={0} and a.L_ID>0",id);
+            SqlDataReader dr = DBHelperSQL.GetDataReader(sql);
+            List<Follow> list = new List<Follow>();
+            while (dr.Read())
+            {
+                Follow f = new Follow();
+                f.L_StartingPlace = dr["L_StartingPlace"].ToString();
+                f.L_Destination = dr["L_Destination"].ToString();
+                f.AddNumber = (int)dr["AddNumber"];
+
+                list.Add(f);
+            }
+            dr.Close();
+            return list;
+        }
+
+        public static List<Follow> JRB(int id)
+        {
+            string sql = string.Format(" select b.S_StartingPlace,b.S_Destination,b.S_Approach,a.AddNumber from Follow a join ShortDistance b on a.S_ID=b.S_ID  where a.UserID={0} and a.S_ID>0", id);
+            SqlDataReader dr = DBHelperSQL.GetDataReader(sql);
+            List<Follow> list = new List<Follow>();
+            while (dr.Read())
+            {
+                Follow f = new Follow();
+                f.S_StartingPlace = dr["S_StartingPlace"].ToString();
+                f.S_Approach = dr["S_Approach"].ToString();
+                f.S_Destination = dr["S_Destination"].ToString();
+                f.AddNumber = (int)dr["AddNumber"];
+
+                list.Add(f);
+            }
+            dr.Close();
+            return list;
+        }
         public static bool Delete(int id)
         {
             string sql = "delete from Follow where L_ID=" + id;

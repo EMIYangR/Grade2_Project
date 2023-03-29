@@ -35,6 +35,11 @@ namespace CarPoolingMS
                 string code = Session["emailCode"].ToString();
                 if (code == TextBox9.Text)
                 {
+                    if (u.CarID.Trim() == "" && u.CarType.Trim() == "")
+                    {
+                        u.CarType = "无";
+                        u.CarID = "无";
+                    }
                     if (UserInfoManager.Add(u))
                     {
                         Response.Write("<script>alert('注册成功')</script>");
@@ -58,7 +63,7 @@ namespace CarPoolingMS
         //发送验证码
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            if (UserInfoManager.UserInfoByemail(TextBox6.Text) != null)
+            if (UserInfoManager.UserInfoByemail(TextBox6.Text) == null)
             {
                 Response.Write("<script>alert('邮箱已经注册')</script>");
             }

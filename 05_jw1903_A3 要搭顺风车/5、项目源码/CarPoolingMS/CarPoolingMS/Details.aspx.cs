@@ -112,8 +112,7 @@ namespace CarPoolingMS
                                 }
 
                             }
-                            Response.Write("<script>alert('加入成功')</script>");
-                            Response.Redirect("Long.aspx");
+                            Response.Write("<script>alert('加入成功');location.href='Long.aspx?id=1'</script>");
                         }
 
                     }
@@ -126,10 +125,6 @@ namespace CarPoolingMS
                 {
                     Response.Write("<script>alert('不能为空')</script>");
                 }
-
-
-
-
             }
         }
 
@@ -140,7 +135,7 @@ namespace CarPoolingMS
                 int id = int.Parse(Request.QueryString["id"]);
                 if (LongDistanceManager.Delete(id))
                 {
-                    Response.Write("<script>alert('删除成功')</script>;location.href='Long.aspx?id=1'</script>");
+                    Response.Write("<script>alert('删除成功');location.href='Long.aspx?id=1'</script>");
                 }
                 else
                 {
@@ -176,7 +171,7 @@ namespace CarPoolingMS
                     f.AddNumber = Unumber;
                     if (FollowManager.Add(f))
                     {
-                        Response.Write("<script>alert('邀请成功')</script>");
+                        Response.Write("<script>alert('邀请成功');location.href='Long.aspx?id=1'</script>");
                     }
                     else
                     {
@@ -291,5 +286,6 @@ namespace CarPoolingMS
                 ReapterPageBind(pager, id);
             }
         }
+
     }
 }

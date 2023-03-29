@@ -109,8 +109,7 @@ namespace CarPoolingMS
                                 }
 
                             }
-                            Response.Write("<script>alert('加入成功')</script>");
-                            Response.Redirect("Short.aspx?id=1");
+                            Response.Write("<script>alert('加入成功');location.href='Short.aspx?id=1'</script>");
                         }
 
                     }
@@ -169,7 +168,7 @@ namespace CarPoolingMS
                     f.AddNumber = Unumber;
                     if (FollowManager.AddS(f))
                     {
-                        Response.Write("<script>alert('邀请成功')</script>");
+                        Response.Write("<script>alert('邀请成功');location.href='Short.aspx?id=1'</script>");
                     }
                     else
                     {

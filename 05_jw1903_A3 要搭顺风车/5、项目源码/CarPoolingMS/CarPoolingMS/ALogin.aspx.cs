@@ -26,7 +26,7 @@ namespace CarPoolingMS
 
             if (UserInfoManager.UserInfoByuserpwd(TextBox1.Text, TextBox2.Text) == null)
             {
-                Response.Write("<script>alert('登录成功');location.href='Index.aspx'</script>");
+                Response.Write("<script>location.href='Index.aspx'</script>");
 
                 userid = UserInfoManager.UserInfoByuserid(TextBox1.Text, TextBox2.Text);
 
@@ -34,7 +34,7 @@ namespace CarPoolingMS
             }
             else
             {
-                Response.Write("<script>alert('登录失败')</script>");
+                Response.Write("<script>alert('账号和密码错误')</script>");
             }
         }
     }

@@ -10,7 +10,15 @@ namespace BLL
 {
     public class FollowManager
     {
-        public static bool Delete(int id)
+        public static List<Follow> JRA(int id)
+        {
+            return FollowService.JRA(id);
+        }
+            public static List<Follow> JRB(int id)
+        {
+            return FollowService.JRB(id);
+        }
+            public static bool Delete(int id)
         {
             return FollowService.Delete(id);
         }

@@ -145,8 +145,10 @@ namespace DAL
             }
             else
             {
-                sql = string.Format("select * from LongDistance a join Publish b on a.PublishID = b.PublishID " +
-                "join UserInfo c on c.UserID = a.UserID where b.PublishID = {0}", id);
+                sql = string.Format("SELECT * FROM LongDistance ld " +
+                "JOIN UserInfo ui ON ui.UserID = ld.UserID " +
+                "JOIN Publish p ON p.PublishID = ld.PublishID " +
+                "WHERE ld.PublishID={0} and ld.L_Effective = '有效'", id);
             }
             SqlDataReader dr = DBHelperSQL.GetDataReader(sql);
             List<LongDistance> list = new List<LongDistance>();

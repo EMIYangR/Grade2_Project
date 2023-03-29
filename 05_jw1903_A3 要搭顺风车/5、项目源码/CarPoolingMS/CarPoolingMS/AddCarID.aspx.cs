@@ -25,8 +25,12 @@ namespace CarPoolingMS
             {
                 if (UserInfoManager.XgByType(TextBox1.Text, TextBox2.Text, id))
                 {
-                    Response.Write("<script>alert('完成添加')</script>;location.href='Publish.aspx'</script>");
+                    Response.Write("<script>alert('完成添加！');location.href='Publish.aspx'</script>");
                 }
+            }
+            else
+            {
+                Response.Write("<script>alert('完成添加才能进行发布！')</script>");
             }
         }
     }

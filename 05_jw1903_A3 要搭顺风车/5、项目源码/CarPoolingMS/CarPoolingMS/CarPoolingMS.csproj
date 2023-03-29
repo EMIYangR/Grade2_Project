@@ -80,6 +80,8 @@
     <Content Include="Content\select2.min.css" />
     <Content Include="HistoricalOrder.aspx" />
     <Content Include="Modify.aspx" />
+    <Content Include="MyJoinS.aspx" />
+    <Content Include="MyJoin.aspx" />
     <Content Include="ShortDetails.aspx" />
     <Content Include="Details.aspx" />
     <Content Include="Global.asax" />
@@ -128,6 +130,20 @@
     </Compile>
     <Compile Include="Modify.aspx.designer.cs">
       <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyJoinS.aspx.cs">
+      <DependentUpon>MyJoinS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyJoinS.aspx.designer.cs">
+      <DependentUpon>MyJoinS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyJoin.aspx.cs">
+      <DependentUpon>MyJoin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyJoin.aspx.designer.cs">
+      <DependentUpon>MyJoin.aspx</DependentUpon>
     </Compile>
     <Compile Include="ShortDetails.aspx.cs">
       <DependentUpon>ShortDetails.aspx</DependentUpon>

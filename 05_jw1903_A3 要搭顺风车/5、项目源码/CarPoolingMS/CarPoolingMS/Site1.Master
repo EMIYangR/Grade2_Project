@@ -108,6 +108,7 @@
                             <a class="nav-link" href="#">更多</a>
                             <div class="dropdown-menu dropdown-menu-single">
                                 <a href="HistoricalOrder.aspx?le='有效'" class="dropdown-item">历史订单</a>
+                                <a href="MyJoin.aspx" class="dropdown-item">我的加入</a>
                                 <div class="dropdown-divider"></div>
                                 <asp:LinkButton ID="LinkButton1" runat="server" href="ALogin.aspx" class="dropdown-item">登录</asp:LinkButton>
                                 <asp:LinkButton ID="LinkButton2" runat="server" href="Register.aspx" class="dropdown-item">注册</asp:LinkButton>

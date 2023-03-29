@@ -127,7 +127,7 @@
             <p>
                 <asp:Label ID="Label17" runat="server" Text="加入人数"></asp:Label>
                 <asp:TextBox ID="TextBox1" runat="server" type="number" class="form-control form-control-emphasized" Width="200px"></asp:TextBox>
-                <asp:Button ID="Button1" runat="server" Text="加入" class="btn btn-soft-success" />
+                <asp:Button ID="Button1" runat="server" Text="加入" class="btn btn-soft-success" OnClick="Button1_Click" />
 
             </p>
             <%}

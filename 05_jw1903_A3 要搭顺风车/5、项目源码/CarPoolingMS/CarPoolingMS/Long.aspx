@@ -4,7 +4,7 @@
 
     <style>
         #form1 #long #long1 {
-            display: flex;
+            /*display: flex;*/
             flex-wrap: wrap;
             /*border:1px solid red;*/
             height: 180px;
@@ -15,7 +15,7 @@
             }
 
         #form1 #long #long2 {
-            margin-left: 50px;
+            /*margin-left: 50px;*/
         }
 
             #form1 #long #long2 p {
@@ -25,7 +25,7 @@
         #form1 #long #long3 {
             height: 150px;
             line-height: 180px;
-            margin-left: 45%;
+            /*margin-left: 45%;*/
         }
 
         #form1 #long #long1 img {
@@ -125,11 +125,11 @@
     <div id="long">
         <asp:Repeater ID="Repeater1" runat="server">
             <ItemTemplate>
-                <div id="long1">
-                    <div id="long4">
+                <div id="long1" class="row">
+                    <div id="long4" class="col-md-3">
                         <img src="Content/image/lcar.jpg" />
                     </div>
-                    <div id="long2">
+                    <div id="long2"class="col-md-6">
                         <p>
                             <%# Eval("L_Message") %>
                         </p>
@@ -141,7 +141,7 @@
                                 <%# Eval("L_Destination")  %>
                         </p>
                     </div>
-                    <div id="long3">
+                    <div id="long3"class="col-md-2">
                         <a href="Details.aspx?id=<%# Eval("L_ID") %>">查看详情</a>
                     </div>
                 </div>

@@ -123,7 +123,7 @@
                                                 <ion-icon name="key-outline"></ion-icon>
                                             </span>
                                         </div>
-                                        <asp:TextBox class="form-control" ID="TextBox3" placeholder="请输入您的密码" runat="server" required TextMode="Password" OnDataBinding="TextBox3_TextChanged"></asp:TextBox>
+                                        <asp:TextBox class="form-control" ID="TextBox3" placeholder="请输入您的密码" runat="server" required TextMode="Password" OnTextChanged="TextBox3_TextChanged"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -139,7 +139,7 @@
                                                 <ion-icon name="key-outline"></ion-icon>
                                             </span>
                                         </div>
-                                        <asp:TextBox class="form-control" ID="TextBox4" placeholder="请再次输入您的密码" runat="server" required TextMode="Password" OnDataBinding="TextBox4_TextChanged"></asp:TextBox>
+                                        <asp:TextBox class="form-control" ID="TextBox4" placeholder="请再次输入您的密码" runat="server" required TextMode="Password" OnTextChanged="TextBox4_TextChanged" ></asp:TextBox>
                                     </div>
                                 </div>
 

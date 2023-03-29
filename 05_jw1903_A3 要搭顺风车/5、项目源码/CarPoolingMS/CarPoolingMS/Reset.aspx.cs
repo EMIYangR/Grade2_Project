@@ -28,7 +28,7 @@ namespace CarPoolingMS
                     {
 
                         Response.Write("<script>alert('修改成功')</script>");
-                        Response.Redirect("~/Login.aspx");
+                        Response.Redirect("~/ALogin.aspx");
                     }
                     else
                     {
@@ -59,7 +59,7 @@ namespace CarPoolingMS
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            if (BLL.UserInfoManager.UserInfoByemail(TextBox1.Text) != null)
+            if (BLL.UserInfoManager.UserInfoByemail(TextBox1.Text) == null)
             {
                 Help.EmailCode.Send(TextBox1.Text);
             }

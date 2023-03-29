@@ -215,7 +215,7 @@
             </div>
             <div class="col-md-4">
                 <div id="input">
-                    <input id="btnSearch" type="button" value="搜索线路" onclick="ssClick();" class="btn btn-soft-info" />
+                    <%--<input id="btnSearch" type="button" value="搜索线路" onclick="ssClick();" class="btn btn-soft-info" />--%>
                 </div>
                 <div id="allmap"></div>
             </div>
@@ -223,18 +223,20 @@
     </div>
     <script> 
         // 百度地图API功能
+        var start = document.getElementById("ContentPlaceHolder1_TextBox1").value
+            , end = document.getElementById("ContentPlaceHolder1_TextBox2").value;
         var map = new BMap.Map("allmap");
         map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
         var driving = new BMap.DrivingRoute(map, { renderOptions: { map: map, autoViewport: true } });
-
-        function ssClick() {
-            var start = document.getElementById("ContentPlaceHolder1_TextBox1").value
-                , end = document.getElementById("ContentPlaceHolder1_TextBox2").value;
-            var map = new BMap.Map("allmap");
-            map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
-            var driving = new BMap.DrivingRoute(map, { renderOptions: { map: map, autoViewport: true } });
-            driving.search(start, end);
-        }
+        driving.search(start, end);
+        //function ssClick() {
+        //    var start = document.getElementById("ContentPlaceHolder1_TextBox1").value
+        //        , end = document.getElementById("ContentPlaceHolder1_TextBox2").value;
+        //    var map = new BMap.Map("allmap");
+        //    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+        //    var driving = new BMap.DrivingRoute(map, { renderOptions: { map: map, autoViewport: true } });
+        //    driving.search(start, end);
+        //}
     </script>
 </asp:Content>
 
